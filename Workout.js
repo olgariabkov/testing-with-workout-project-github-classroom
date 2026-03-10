@@ -2,11 +2,15 @@ import { db } from './dbConnection.js';
 import { logger } from './logger.js';
 
 
-const createWorkout = username => {
+/*const createWorkout = username => {
     if (typeof username !== 'string' || username.length < 4) {
         throw new Error("the parameter username is not valid");
     }
     return db('workouts_exercises').insert({ username });
+};*/
+
+const createWorkout = username => {
+    return;
 };
 
 const addExercise = (workoutId, exerciseName) => {
