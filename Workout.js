@@ -10,7 +10,7 @@ import { logger } from './logger.js';
 };*/
 
 const createWorkout = username => {
-    return;
+    throw new Error("Broken intentionally");
 };
 
 const addExercise = (workoutId, exerciseName) => {
