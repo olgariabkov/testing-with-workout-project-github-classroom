@@ -15,5 +15,7 @@ jobs:
         run: |
           gh issue create \
             --repo ${{ github.repository }} \
-            --title "$ISSUE_PREFIX from job id ${{ github.job }}" \
-            --body "${{ github.actor }} triggered the creation of this issue. Github bot created it."
+            --title "Test issue from workflow" \
+            --body "This issue was created by GitHub Actions"
+        env:
+          GH_TOKEN: ${{ github.token }}
