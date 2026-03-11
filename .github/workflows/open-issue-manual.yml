@@ -1,0 +1,19 @@
+name: Open a new issue
+
+on: workflow_dispatch
+
+jobs:
+  open-new-issue:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Create issue
+        run: |
+          gh issue create \
+            --repo ${{ github.repository }} \
+            --title "$ISSUE_PREFIX from job id ${{ github.job }}" \
+            --body "${{ github.actor }} triggered the creation of this issue. Github bot created it."
